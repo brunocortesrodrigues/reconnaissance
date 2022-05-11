@@ -60,4 +60,4 @@ Let's check another example from one of our labs:
 
 ![](./nmap_sV.png)
 
-We can see the version of the services running on port 22 and 80. This gives us crucial information about the services running on the host. We can then check if the services running on those particular versions are vulnerable to known vulnerabilities. This will prove to be a useful tool for the exploitation phase.
+We can see the version of the services running on port 22 and 80. This gives us crucial information about the services running on the host. We can then check if the services running on those particular versions are vulnerable to known vulnerabilities. This information might be crucial for the exploitation phase.
