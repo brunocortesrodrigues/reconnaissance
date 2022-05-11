@@ -38,7 +38,11 @@ Let's see an example from one of our labs:
 
 ![](./nmap_sS.png)
 
-From this simple scan we can learn a lot about our host, we can see, for example, ftp and mysql services running on open ports. This information can be used during the exploitation phase.
+From this simple scan we can learn a lot about our host, we can see, for example, ftp and mysql services running on open ports. This information can be used during the exploitation phase. There are many other tools that can be used to perform port scanning such as netcat. We can use netcat to scan for open ports on our host based or port range:
+
+```
+nc -zv <ip> <port range> 2>&1 | grep succeeded
+```
 
 Another important part of the port scanning process is understanding firewall rules implemented and try to identify possible misconfigurations in firewall that would allow the attacker ways to bypass it. There are Nmap options such as -SF (FIN) and -sX (XMAS) that will send packets with only certain flags set to test if the firewall is responding accordingly. Even more problematic, identifying the lack of a firewall represents an open door to the attacker for easy access to the network.
 
@@ -61,3 +65,11 @@ Let's check another example from one of our labs:
 ![](./nmap_sV.png)
 
 We can see the version of the services running on port 22 and 80. This gives us crucial information about the services running on the host. We can then check if the services running on those particular versions are vulnerable to known vulnerabilities. This information might be crucial for the exploitation phase.
+
+## References
+
+[Nmap - Docs](https://nmap.org/book/)
+
+[Mitre - Reconaissance](https://attack.mitre.org/tactics/TA0043/)
+
+[Netcat](https://www.linuxshelltips.com/netcat-linux-port-scanning/)
