@@ -38,7 +38,7 @@ Let's see an example from one of our labs:
 
 ![](./nmap_sS.png)
 
-From this simple scan we can learn a lot about our host, we can see, for example, ftp and mysql services running on open ports. This information can be used during the exploitation phase. There are many other tools that can be used to perform port scanning such as netcat. We can use netcat to scan for open ports on our host based or port range:
+From this simple scan we can learn a lot about our host, we can see, for example, ftp and mysql services running on open ports. This information can be used during the exploitation phase. There are many other tools that can be used to perform port scanning such as netcat:
 
 ```
 nc -zv <ip> <port range> 2>&1 | grep succeeded
